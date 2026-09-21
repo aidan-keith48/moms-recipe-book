@@ -1,0 +1,7 @@
+.DS_Store
+# private working files - not part of the published site
+PROJECT_BRIEF.md
+recipes_from_links.txt
+assets/img/image.png
+assets/img/image copy.png
+.vscode/

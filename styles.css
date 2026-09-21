@@ -1,0 +1,113 @@
+/* ==========================================================================
+   Mom's Recipe Book — Design System
+   Vintage-cozy scrapbook: dusty rose + cream + kraft brown, handwritten
+   titles, warm serif body. See PROJECT_BRIEF.md for the full spec.
+   ========================================================================== */
+
+:root {
+  /* -- Color tokens --------------------------------------------------- */
+  --color-cream: #F5EDE3;   /* page background */
+  --color-kraft: #C9A87C;   /* secondary background, cover */
+  --color-coffee: #4A3324;  /* body text, headings */
+  --color-rose: #D8A7A1;    /* highlights, banners */
+  --color-sage: #A8B89A;    /* secondary highlights */
+  --color-gold: #C9A227;    /* borders, dividers, icons */
+
+  /* -- Font tokens ------------------------------------------------------ */
+  --font-title: 'Homemade Apple', cursive;
+  --font-body: 'Lora', serif;
+
+  /* -- Type scale --------------------------------------------------------
+     Sizes tuned for a recipe-card spread, not a generic web page. */
+  --text-recipe-title: 3rem;      /* large script recipe name */
+  --text-subtitle: 1.25rem;       /* ribbon banner: "Serves 12" etc. */
+  --text-body: 1.0625rem;         /* paragraph / step text */
+  --text-step-number: 1.0625rem;  /* numbered method steps */
+  --text-note: 0.9375rem;         /* footer band / "Mom's Tip" / small print */
+
+  /* -- Spacing scale ------------------------------------------------------ */
+  --space-xs: 0.375rem;
+  --space-sm: 0.75rem;
+  --space-md: 1.25rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+
+  /* -- Shape / shadow ----------------------------------------------------- */
+  --radius-card: 0.75rem;
+  --radius-pill: 999px;
+  --shadow-card: 0 4px 14px rgba(74, 51, 36, 0.15);
+}
+
+/* -- Base ------------------------------------------------------------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--color-cream);
+  color: var(--color-coffee);
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-title);
+  font-weight: 400;
+  margin: 0 0 var(--space-sm);
+}
+
+/* -- Reusable components (used by style-guide.html and, later, real
+      recipe pages) --------------------------------------------------- */
+
+/* Ribbon banner — subtitle/serving info under a recipe title */
+.ribbon {
+  display: inline-block;
+  background: var(--color-rose);
+  color: var(--color-coffee);
+  font-family: var(--font-body);
+  font-size: var(--text-subtitle);
+  font-weight: 600;
+  padding: var(--space-xs) var(--space-lg);
+  border-radius: var(--radius-pill);
+}
+
+/* Oven-temp / key-spec callout box */
+.callout {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  background: var(--color-cream);
+  border: 2px solid var(--color-gold);
+  border-radius: var(--radius-card);
+  padding: var(--space-sm) var(--space-md);
+}
+
+.callout .callout-label {
+  font-size: var(--text-note);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-gold);
+}
+
+.callout .callout-value {
+  font-size: var(--text-subtitle);
+  font-weight: 600;
+}
+
+/* "Mom's Tip" footer band */
+.tip-band {
+  background: var(--color-sage);
+  color: var(--color-coffee);
+  border-radius: var(--radius-card);
+  padding: var(--space-md);
+  font-size: var(--text-note);
+}
+
+.tip-band .tip-label {
+  font-family: var(--font-title);
+  font-size: 1.5rem;
+  display: block;
+  margin-bottom: var(--space-xs);
+}

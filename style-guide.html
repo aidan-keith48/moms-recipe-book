@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Style Guide — Mom's Recipe Book</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .guide {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: var(--space-xl) var(--space-lg) var(--space-xl);
+  }
+
+  .guide-intro {
+    margin-bottom: var(--space-xl);
+  }
+
+  .guide-intro h1 {
+    font-size: var(--text-recipe-title);
+    margin-bottom: var(--space-xs);
+  }
+
+  .guide-intro p {
+    margin: 0;
+    color: var(--color-coffee);
+    opacity: 0.75;
+  }
+
+  section.guide-section {
+    margin-bottom: var(--space-xl);
+  }
+
+  section.guide-section h2 {
+    font-size: 1.9rem;
+    border-bottom: 2px solid var(--color-gold);
+    padding-bottom: var(--space-xs);
+    margin-bottom: var(--space-md);
+  }
+
+  /* Color swatches */
+  .swatch-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: var(--space-md);
+  }
+
+  .swatch {
+    border-radius: var(--radius-card);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    background: #fff;
+  }
+
+  .swatch-color {
+    height: 90px;
+  }
+
+  .swatch-info {
+    padding: var(--space-sm);
+    font-size: var(--text-note);
+  }
+
+  .swatch-info .swatch-name {
+    font-weight: 600;
+    display: block;
+  }
+
+  .swatch-info .swatch-hex {
+    font-family: monospace;
+    opacity: 0.7;
+  }
+
+  .swatch-info .swatch-use {
+    display: block;
+    margin-top: var(--space-xs);
+    opacity: 0.75;
+  }
+
+  /* Typography specimens */
+  .type-specimen {
+    background: #fff;
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card);
+    padding: var(--space-lg);
+    margin-bottom: var(--space-md);
+  }
+
+  .type-specimen .label {
+    font-size: var(--text-note);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-gold);
+    display: block;
+    margin-bottom: var(--space-sm);
+  }
+
+  .specimen-title {
+    font-size: var(--text-recipe-title);
+    font-family: var(--font-title);
+  }
+
+  .specimen-subtitle {
+    font-size: var(--text-subtitle);
+    font-family: var(--font-body);
+    font-weight: 600;
+  }
+
+  .step-list {
+    padding-left: 1.4em;
+    margin: 0;
+  }
+
+  .step-list li {
+    margin-bottom: var(--space-xs);
+  }
+
+  .ingredient-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .ingredient-list li {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-xs);
+  }
+
+  .ingredient-list li::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--color-gold);
+    flex-shrink: 0;
+  }
+
+  /* Component preview row */
+  .component-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    align-items: flex-start;
+  }
+
+  .component-row .tip-band {
+    max-width: 320px;
+  }
+
+  .icon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    gap: var(--space-sm);
+  }
+
+  .icon-tile {
+    background: #fff;
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card);
+    padding: var(--space-sm);
+    text-align: center;
+  }
+
+  .icon-tile img {
+    display: block;
+    margin: 0 auto var(--space-xs);
+  }
+
+  .icon-tile span {
+    font-size: 0.8rem;
+    opacity: 0.75;
+  }
+
+  h3.icon-subhead {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-gold);
+    margin: var(--space-md) 0 var(--space-sm);
+  }
+</style>
+</head>
+<body>
+
+<div class="guide">
+
+  <div class="guide-intro">
+    <h1>Style Guide</h1>
+    <p>Design tokens for Mom's Recipe Book — palette, type, and the small reusable pieces recipe pages will be built from. No flipbook mechanics on this page, just a sanity check.</p>
+  </div>
+
+  <section class="guide-section">
+    <h2>Color Palette</h2>
+    <div class="swatch-grid">
+      <div class="swatch">
+        <div class="swatch-color" style="background: var(--color-cream);"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Cream / paper base</span>
+          <span class="swatch-hex">#F5EDE3</span>
+          <span class="swatch-use">Page background</span>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background: var(--color-kraft);"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Kraft brown</span>
+          <span class="swatch-hex">#C9A87C</span>
+          <span class="swatch-use">Secondary background, cover</span>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background: var(--color-coffee);"></div>
+        <div class="swatch-info" style="color: #F5EDE3; background: var(--color-coffee);">
+          <span class="swatch-name">Deep coffee text</span>
+          <span class="swatch-hex">#4A3324</span>
+          <span class="swatch-use">Body text, headings</span>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background: var(--color-rose);"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Dusty rose accent</span>
+          <span class="swatch-hex">#D8A7A1</span>
+          <span class="swatch-use">Highlights, banners</span>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background: var(--color-sage);"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Muted sage accent</span>
+          <span class="swatch-hex">#A8B89A</span>
+          <span class="swatch-use">Secondary highlights</span>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background: var(--color-gold);"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Soft gold</span>
+          <span class="swatch-hex">#C9A227</span>
+          <span class="swatch-use">Borders, dividers, icons</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="guide-section">
+    <h2>Typography</h2>
+
+    <div class="type-specimen">
+      <span class="label">Title font — Homemade Apple</span>
+      <div class="specimen-title">Grandma's Brownies</div>
+    </div>
+
+    <div class="type-specimen">
+      <span class="label">Subtitle / ribbon — Lora, semibold</span>
+      <span class="ribbon specimen-subtitle">Serves 12 · Para 12 personas</span>
+    </div>
+
+    <div class="type-specimen">
+      <span class="label">Body paragraph — Lora</span>
+      <p style="margin:0;">A little handwritten note might sit here — the kind of line Mom would jot on the back of a recipe card, like "double the vanilla if you're feeling fancy."</p>
+    </div>
+
+    <div class="type-specimen">
+      <span class="label">Ingredients list — Lora</span>
+      <ul class="ingredient-list">
+        <li>1 cup unsalted butter, melted</li>
+        <li>2 cups granulated sugar</li>
+        <li>4 large eggs</li>
+        <li>1 cup all-purpose flour</li>
+        <li>1/2 cup cocoa powder</li>
+      </ul>
+    </div>
+
+    <div class="type-specimen">
+      <span class="label">Method steps — Lora</span>
+      <ol class="step-list">
+        <li>Preheat oven to 350°F and line a baking pan.</li>
+        <li>Whisk melted butter and sugar until glossy.</li>
+        <li>Beat in eggs one at a time, then fold in dry ingredients.</li>
+        <li>Bake 25–30 minutes, until a toothpick comes out mostly clean.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="guide-section">
+    <h2>Icon Set (26)</h2>
+
+    <h3 class="icon-subhead">Ingredients (20)</h3>
+    <div class="icon-grid">
+      <div class="icon-tile"><img src="assets/icons/butter.svg" width="48" height="48" alt="Butter"><span>Butter</span></div>
+      <div class="icon-tile"><img src="assets/icons/chocolate-bar.svg" width="48" height="48" alt="Chocolate bar"><span>Chocolate</span></div>
+      <div class="icon-tile"><img src="assets/icons/egg.svg" width="48" height="48" alt="Egg"><span>Egg</span></div>
+      <div class="icon-tile"><img src="assets/icons/flour.svg" width="48" height="48" alt="Flour"><span>Flour</span></div>
+      <div class="icon-tile"><img src="assets/icons/sugar.svg" width="48" height="48" alt="Sugar"><span>Sugar</span></div>
+      <div class="icon-tile"><img src="assets/icons/vanilla-pod.svg" width="48" height="48" alt="Vanilla pod"><span>Vanilla</span></div>
+      <div class="icon-tile"><img src="assets/icons/nuts.svg" width="48" height="48" alt="Nuts"><span>Nuts</span></div>
+      <div class="icon-tile"><img src="assets/icons/salt.svg" width="48" height="48" alt="Salt"><span>Salt</span></div>
+      <div class="icon-tile"><img src="assets/icons/milk.svg" width="48" height="48" alt="Milk"><span>Milk</span></div>
+      <div class="icon-tile"><img src="assets/icons/oven.svg" width="48" height="48" alt="Oven"><span>Oven</span></div>
+      <div class="icon-tile"><img src="assets/icons/orange.svg" width="48" height="48" alt="Orange"><span>Orange</span></div>
+      <div class="icon-tile"><img src="assets/icons/banana.svg" width="48" height="48" alt="Banana"><span>Banana</span></div>
+      <div class="icon-tile"><img src="assets/icons/cinnamon-stick.svg" width="48" height="48" alt="Cinnamon stick"><span>Cinnamon</span></div>
+      <div class="icon-tile"><img src="assets/icons/rice.svg" width="48" height="48" alt="Rice"><span>Rice</span></div>
+      <div class="icon-tile"><img src="assets/icons/chicken.svg" width="48" height="48" alt="Chicken"><span>Chicken</span></div>
+      <div class="icon-tile"><img src="assets/icons/onion.svg" width="48" height="48" alt="Onion"><span>Onion</span></div>
+      <div class="icon-tile"><img src="assets/icons/garlic-ginger.svg" width="48" height="48" alt="Garlic and ginger"><span>Garlic + ginger</span></div>
+      <div class="icon-tile"><img src="assets/icons/lentils-beans.svg" width="48" height="48" alt="Lentils and beans"><span>Lentils/beans</span></div>
+      <div class="icon-tile"><img src="assets/icons/cheese.svg" width="48" height="48" alt="Cheese"><span>Cheese</span></div>
+      <div class="icon-tile"><img src="assets/icons/corn.svg" width="48" height="48" alt="Corn"><span>Corn</span></div>
+    </div>
+
+    <h3 class="icon-subhead">Decorative (6)</h3>
+    <div class="icon-grid">
+      <div class="icon-tile"><img src="assets/icons/heart.svg" width="40" height="40" alt="Heart doodle"><span>Heart</span></div>
+      <div class="icon-tile"><img src="assets/icons/star.svg" width="40" height="40" alt="Star doodle"><span>Star</span></div>
+      <div class="icon-tile"><img src="assets/icons/sparkle.svg" width="40" height="40" alt="Sparkle mark"><span>Sparkle</span></div>
+      <div class="icon-tile"><img src="assets/icons/ribbon-banner.svg" width="80" height="20" alt="Ribbon banner"><span>Ribbon banner</span></div>
+      <div class="icon-tile"><img src="assets/icons/torn-paper-edge.svg" width="80" height="16" alt="Torn paper edge"><span>Torn edge</span></div>
+      <div class="icon-tile"><img src="assets/icons/washi-tape.svg" width="70" height="24" alt="Washi tape strip"><span>Washi tape</span></div>
+    </div>
+  </section>
+
+  <section class="guide-section">
+    <h2>Component Previews</h2>
+    <div class="component-row">
+      <span class="ribbon">Serves 12</span>
+
+      <div class="callout">
+        <span class="callout-label">Oven</span>
+        <span class="callout-value">350°F · 25–30 min</span>
+      </div>
+
+      <div class="tip-band">
+        <span class="tip-label">Mom's Tip</span>
+        Let the brownies cool completely before cutting, or they'll fall apart.
+      </div>
+    </div>
+  </section>
+
+</div>
+
+</body>
+</html>

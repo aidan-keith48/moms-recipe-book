@@ -1,0 +1,519 @@
+/* ==========================================================================
+   Book shell + page anatomy for the live flipbook (index.html).
+   Every size derives from --pw / --ph (the pixel size of one page, set by
+   book.js) so a page looks the same on a laptop and on a phone.
+   ========================================================================== */
+
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  overscroll-behavior: none;
+  background: var(--color-kraft);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-image:
+    radial-gradient(rgba(74, 51, 36, 0.07) 1px, transparent 1px),
+    radial-gradient(ellipse at 50% 40%, rgba(255, 255, 255, 0.16), transparent 70%);
+  background-size: 16px 16px, 100% 100%;
+}
+
+.app {
+  height: 100vh;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  box-sizing: border-box;
+}
+
+.book-stage {
+  flex: 1;
+  min-height: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.book-slider {
+  transition: transform 0.85s cubic-bezier(0.45, 0.05, 0.25, 1);
+  will-change: transform;
+}
+
+.book-slider.no-anim {
+  transition: none;
+}
+
+#book {
+  position: relative;
+  opacity: 0;
+  transform: translateY(14px) scale(0.985);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+#book.ready {
+  opacity: 1;
+  transform: none;
+}
+
+#book .stf__wrapper {
+  height: 100%;
+}
+
+/* The library's default perspective (2000px) makes a turning page balloon past
+   the edges of the screen; a much longer lens keeps the turn natural. */
+#book .stf__block {
+  perspective: 5500px;
+}
+
+.book-loading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-title);
+  font-size: 1.6rem;
+  color: var(--color-coffee);
+  opacity: 0.7;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.book-loading.done {
+  opacity: 0;
+}
+
+/* -- Paper: every page casts its own shadow, so a closed book (one page) is
+      not surrounded by an empty two-page box. --------------------------- */
+#book .page {
+  background: var(--color-cream);
+  box-shadow: 0 10px 28px rgba(60, 35, 15, 0.3);
+}
+
+#book .page.--left::after,
+#book .page.--right::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 7%;
+  pointer-events: none;
+  z-index: 5;
+}
+#book .page.--left::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(70, 40, 15, 0.18), transparent);
+}
+#book .page.--right::after {
+  left: 0;
+  background: linear-gradient(to right, rgba(70, 40, 15, 0.18), transparent);
+}
+#book .page.--hard::after {
+  display: none;
+}
+
+/* ==========================================================================
+   Recipe / contents pages
+   ========================================================================== */
+#book .rp,
+.measure .rp {
+  --icon: clamp(26px, calc(var(--pw) * 0.075), 36px);
+  font-size: clamp(1rem, calc(var(--pw) * 0.028), 1.1rem);
+  line-height: 1.5;
+  height: 100%;
+  box-sizing: border-box;
+  padding: calc(var(--pw) * 0.075) calc(var(--pw) * 0.085);
+  border-radius: 0;
+  box-shadow: none;
+  overflow: hidden;
+}
+
+#book .rp::before,
+.measure .rp::before {
+  inset: calc(var(--pw) * 0.03);
+}
+
+#book .rp::after {
+  content: "";
+  position: absolute;
+  right: calc(var(--pw) * 0.06);
+  bottom: calc(var(--pw) * 0.05);
+  width: 20px;
+  height: 18px;
+  background: url("assets/icons/heart.svg") center / contain no-repeat;
+  opacity: 0.55;
+}
+
+.rp-body {
+  display: flow-root;
+  position: relative;
+}
+
+/* header */
+.rp-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75em;
+  margin-bottom: 0.8em;
+}
+
+.rp-header-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.rp .header-doodles {
+  margin-bottom: 0.2em;
+}
+.rp .header-doodles img {
+  width: 1.2em;
+}
+
+.rp-title {
+  font-family: var(--font-title);
+  font-weight: 400;
+  font-size: min(4rem, calc(var(--pw) * var(--ts, 0.1)));
+  line-height: 1.2;
+  word-spacing: 0.12em;
+  margin: 0 0 0.35em;
+  overflow-wrap: break-word;
+}
+
+.rp .ribbon-wrap {
+  margin-top: 0.1em;
+}
+.rp .ribbon-wrap img {
+  width: max(9.5em, calc(var(--pw) * 0.34));
+}
+.rp .ribbon-wrap .ribbon-text {
+  font-size: 0.78em;
+}
+
+.rp-hero {
+  flex-shrink: 0;
+  width: 33%;
+  max-width: 200px;
+  height: auto;
+  margin-top: -0.2em;
+}
+
+/* section headings: "Ingredients ---------" */
+.rp-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+  margin: 0 0 0.5em;
+}
+.rp-heading h2 {
+  font-size: clamp(1.4rem, calc(var(--pw) * 0.055), 1.8rem);
+  line-height: 1.2;
+  margin: 0;
+}
+.rp-heading .rp-rule {
+  flex: 1;
+  border-top: 1px dashed var(--color-gold);
+  transform: translateY(0.4em);
+}
+
+.rp-cont {
+  margin-bottom: 0.5em;
+}
+.rp-cont .cont-title {
+  display: block;
+  font-size: 0.72em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-gold);
+  margin-bottom: 0.5em;
+}
+.rp-heading .cont-tag {
+  font-family: var(--font-body);
+  font-size: 0.5em;
+  font-style: italic;
+  opacity: 0.7;
+  margin-left: 0.35em;
+}
+
+/* ingredients */
+.rp .ingredients-list {
+  margin: 0 0 1em;
+}
+.rp .ingredients-list li {
+  margin-bottom: 0.2em;
+  line-height: 1.35;
+  min-height: var(--icon);
+}
+.rp .ingredients-list img {
+  width: var(--icon);
+  height: var(--icon);
+}
+.rp .ingredient-dot {
+  margin: 0 calc((var(--icon) - 10px) / 2);
+}
+
+.rp .callout.dashed {
+  flex-direction: row;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 0.4em;
+  padding: 0.5em 0.9em;
+  gap: 0.8em;
+}
+.rp .callout.dashed img {
+  width: calc(var(--icon) * 1.15);
+  height: calc(var(--icon) * 1.15);
+}
+.rp .callout .callout-label {
+  line-height: 1.2;
+}
+.rp .callout .callout-value {
+  font-size: 1.05em;
+}
+
+/* method */
+.rp .method-list {
+  margin: 0 0 1em;
+  padding-left: 1.5em;
+}
+.rp .method-list li {
+  margin-bottom: 0.65em;
+  padding-left: 0.2em;
+}
+.rp .method-hero {
+  width: calc(var(--pw) * 0.17);
+  margin: -0.4em 0 0.4em 0.8em;
+}
+.rp .speech-bubble {
+  margin: 1.1em 0 1.2em;
+  font-size: 0.92em;
+}
+.rp .nota-box {
+  margin-top: 1.4em;
+  padding: 1em 1.1em 1em 1.4em;
+}
+.rp .nota-box .washi {
+  width: 5.5em;
+  left: 1.2em;
+}
+.rp .nota-box .nota-label {
+  font-size: 1.5em;
+  margin-bottom: 0.1em;
+}
+.rp .nota-box p {
+  font-size: 0.92em;
+}
+
+/* contents */
+.rp .toc-h1 {
+  font-size: min(3rem, calc(var(--pw) * 0.1));
+  margin: 0 0 0.3em;
+  line-height: 1.2;
+}
+.toc-category {
+  font-size: 0.78em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-gold);
+  margin: 0.7em 0 0.1em;
+}
+.toc-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.toc-list a {
+  display: block;
+  color: var(--color-coffee);
+  text-decoration: none;
+  padding: 0.3em 0;
+  border-bottom: 1px dotted rgba(74, 51, 36, 0.28);
+  cursor: pointer;
+  line-height: 1.3;
+}
+.toc-list a:hover,
+.toc-list a:active {
+  color: #b9776f;
+}
+
+/* filler page (keeps two-page spreads aligned) */
+.rp-filler {
+  height: 100%;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9em;
+  opacity: 0.45;
+}
+.rp-filler img {
+  width: 1.6em;
+}
+
+/* ==========================================================================
+   Covers
+   ========================================================================== */
+.cover-page,
+.back-cover-page {
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--color-coffee);
+  position: relative;
+  padding: calc(var(--pw) * 0.09);
+  background:
+    radial-gradient(rgba(74, 51, 36, 0.09) 1px, transparent 1px) 0 0 / 9px 9px,
+    linear-gradient(160deg, #d3b389, var(--color-kraft) 55%, #bf9d6f);
+}
+
+.cover-page::before,
+.back-cover-page::before {
+  content: "";
+  position: absolute;
+  inset: calc(var(--pw) * 0.04);
+  border: 2px solid rgba(245, 237, 227, 0.55);
+  pointer-events: none;
+}
+
+.cover-photo {
+  position: relative;
+  width: min(calc(var(--pw) * 0.62), calc(var(--ph) * 0.4));
+  background: #fffdf9;
+  padding: calc(var(--pw) * 0.03) calc(var(--pw) * 0.03) calc(var(--pw) * 0.085);
+  box-sizing: border-box;
+  box-shadow: 0 8px 22px rgba(60, 35, 15, 0.35);
+  transform: rotate(-2.4deg);
+  margin-bottom: calc(var(--pw) * 0.07);
+}
+.cover-photo img.photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  background: #e8dccb;
+}
+.cover-photo img.tape {
+  position: absolute;
+  top: calc(var(--pw) * -0.035);
+  left: 50%;
+  width: calc(var(--pw) * 0.26);
+  transform: translateX(-50%) rotate(3deg);
+}
+
+.cover-page h1 {
+  font-size: min(3.6rem, calc(var(--pw) * 0.105));
+  line-height: 1.2;
+  margin: 0;
+}
+.cover-page .cover-subtitle {
+  font-style: italic;
+  font-size: clamp(0.85rem, calc(var(--pw) * 0.03), 1.05rem);
+  margin: 0.4em 0 0.7em;
+}
+.cover-page .cover-doodles img {
+  width: 1.3rem;
+  margin: 0 0.3rem;
+  opacity: 0.8;
+}
+
+.back-cover-page .made-with-love {
+  font-family: var(--font-title);
+  font-size: min(2.4rem, calc(var(--pw) * 0.08));
+  line-height: 1.3;
+}
+.back-cover-page img {
+  width: 1.6rem;
+  margin-top: 0.8rem;
+  opacity: 0.8;
+}
+
+/* ==========================================================================
+   Controls
+   ========================================================================== */
+.book-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.35rem 0.75rem 0.85rem;
+  flex-shrink: 0;
+}
+
+.book-controls button {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-coffee);
+  background: var(--color-rose);
+  border: none;
+  border-radius: var(--radius-pill);
+  min-height: 44px;
+  padding: 0 1.3rem;
+  cursor: pointer;
+  box-shadow: var(--shadow-card);
+  touch-action: manipulation;
+}
+.book-controls button.secondary {
+  background: var(--color-cream);
+}
+.book-controls button:hover {
+  filter: brightness(1.05);
+}
+.book-controls button:active {
+  transform: translateY(1px);
+}
+.book-controls button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.swipe-hint {
+  position: absolute;
+  left: 50%;
+  bottom: 0.4rem;
+  transform: translateX(-50%);
+  font-family: var(--font-title);
+  font-size: 0.95rem;
+  color: var(--color-coffee);
+  background: rgba(245, 237, 227, 0.92);
+  padding: 0.35rem 0.9rem;
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-card);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  white-space: nowrap;
+  z-index: 20;
+}
+.swipe-hint.show {
+  opacity: 1;
+}
+
+@media (max-width: 480px) {
+  .book-controls {
+    gap: 0.5rem;
+  }
+  .book-controls button {
+    padding: 0 1.05rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .book-slider,
+  #book {
+    transition: none;
+  }
+}

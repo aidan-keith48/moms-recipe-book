@@ -1,0 +1,647 @@
+[
+  {
+    "id": "brownies",
+    "title": "Brownies",
+    "subtitle": "Serves 12",
+    "category": "baking",
+    "style": "illustrated",
+    "hero": "assets/img/brownies-hero.svg",
+    "methodHero": "assets/img/brownie-toothpick.svg",
+    "oven": { "temp": "180°C", "time": "20–25 min" },
+    "ingredients": [
+      { "text": "300g butter", "icon": "butter" },
+      { "text": "400g chocolate", "icon": "chocolate-bar" },
+      { "text": "350g sugar", "icon": "sugar" },
+      { "text": "5–6 eggs", "icon": "egg" },
+      { "text": "1 tbsp vanilla", "icon": "vanilla-pod" },
+      { "text": "150g flour", "icon": "flour" },
+      { "text": "90g walnuts", "icon": "nuts" },
+      { "text": "Pinch of salt", "icon": "salt" }
+    ],
+    "steps": [
+      "Melt the butter in a saucepan.",
+      "Add the chocolate and stir until fully combined, then remove from heat.",
+      "Add the sugar and stir.",
+      "Transfer the mixture to a bowl and let it cool slightly.",
+      "Add the eggs and stir.",
+      "Fold in the flour and a pinch of salt.",
+      "Fold in the walnuts.",
+      "Pour the batter into a baking pan.",
+      "Bake at 180°C for 20–25 minutes."
+    ],
+    "doneness": "It's ready when a toothpick comes out almost clean.",
+    "note": "You can melt the butter and chocolate together in the microwave in short bursts, stirring each time."
+  },
+  {
+    "id": "pancakes",
+    "title": "Pancakes",
+    "subtitle": "Makes about 15",
+    "category": "baking",
+    "style": "illustrated",
+    "ingredients": [
+      { "text": "2 cups flour, sifted", "icon": "flour" },
+      { "text": "1 tsp baking powder" },
+      { "text": "Pinch of salt", "icon": "salt" },
+      { "text": "2 eggs, beaten", "icon": "egg" },
+      { "text": "1/4 tsp vanilla essence", "icon": "vanilla-pod" },
+      { "text": "1 1/2 cups milk", "icon": "milk" },
+      { "text": "1 1/2 cups water" }
+    ],
+    "steps": [
+      "Add the eggs, vanilla, milk and water to the flour, salt and baking powder, and beat until smooth.",
+      "Place the batter in a sealed container and leave to stand overnight before cooking."
+    ],
+    "note": "The source notes only cover mixing the batter — worth asking Mom how she actually cooks these on the pan (heat, timing, when to flip) to fill in the missing step.",
+    "noteLabel": "Gap:"
+  },
+  {
+    "id": "red-velvet-cupcakes",
+    "title": "Red Velvet Cupcakes",
+    "subtitle": "Makes 12",
+    "category": "baking",
+    "style": "illustrated",
+    "oven": { "temp": "350°F / 175°C", "time": "18–20 min" },
+    "ingredients": [
+      { "text": "1 1/4 cups all-purpose flour", "icon": "flour" },
+      { "text": "3/4 tsp baking soda" },
+      { "text": "1/2 tsp baking powder" },
+      { "text": "2 tbsp unsweetened cocoa powder", "icon": "chocolate-bar" },
+      { "text": "3/4 cup granulated sugar", "icon": "sugar" },
+      { "text": "1/4 tsp salt", "icon": "salt" },
+      { "text": "3/4 cup buttermilk, room temp", "icon": "milk" },
+      { "text": "1/2 cup vegetable oil" },
+      { "text": "1 large egg, room temp", "icon": "egg" },
+      { "text": "1/2 tsp white vinegar" },
+      { "text": "1 tsp vanilla extract", "icon": "vanilla-pod" },
+      { "text": "1 tbsp liquid red food coloring" },
+      { "text": "Frosting: 1/2 cup unsalted butter, room temp", "icon": "butter" },
+      { "text": "Frosting: 4 oz cream cheese, room temp", "icon": "cheese" },
+      { "text": "Frosting: pinch of salt", "icon": "salt" },
+      { "text": "Frosting: 1 tsp vanilla extract", "icon": "vanilla-pod" },
+      { "text": "Frosting: 2 1/4 cups powdered sugar", "icon": "sugar" },
+      { "text": "Frosting: 1/2 tbsp milk (more if needed)", "icon": "milk" }
+    ],
+    "steps": [
+      "Preheat the oven and line a muffin pan.",
+      "Whisk the dry ingredients (flour, cocoa, baking soda, baking powder, sugar, salt) together in one bowl.",
+      "In a separate bowl whisk the wet ingredients (buttermilk, oil, egg, vinegar, vanilla, food coloring), then combine with the dry mix until smooth.",
+      "Fill liners 2/3 full, bake 18–20 min until they spring back when pressed. Cool fully before frosting.",
+      "For the frosting: beat the butter, cream cheese, salt and vanilla until smooth, then beat in the powdered sugar a cup at a time. Loosen with a splash of milk if too thick."
+    ],
+    "note": "Anna Olson's version swaps the food coloring for grated raw beets — more natural, a softer pink-red instead of vivid red. Worth trying as an old-fashioned variant.",
+    "noteLabel": "Variation:"
+  },
+  {
+    "id": "irish-scones",
+    "title": "Irish Scones",
+    "subtitle": "Makes 12",
+    "category": "baking",
+    "style": "illustrated",
+    "oven": { "temp": "425°F / 210°C", "time": "22–26 min" },
+    "ingredients": [
+      { "text": "4 2/3 cups (680g) self-raising flour", "icon": "flour" },
+      { "text": "3/4 cup (170g) frozen butter, salted preferred", "icon": "butter" },
+      { "text": "1/2 cup (115g) granulated sugar", "icon": "sugar" },
+      { "text": "3 tsp baking powder" },
+      { "text": "1 cup (142g) raisins" },
+      { "text": "2 large eggs, beaten", "icon": "egg" },
+      { "text": "1 1/4 cups (300ml) whole milk", "icon": "milk" }
+    ],
+    "steps": [
+      "Add the flour to a large bowl. Grate the frozen butter straight into it — this is the key trick, cold butter creates flaky pockets as it bakes.",
+      "Stir in the sugar, baking powder and raisins.",
+      "Whisk the eggs and milk together, pour into the flour mixture, and stir until a soft dough just comes together.",
+      "Turn out onto a floured surface, press to about 1 inch thick, cut into rounds with a 3-inch cutter, gather scraps and repeat.",
+      "Brush tops with egg wash, bake 22–26 minutes until golden brown.",
+      "Cool slightly, then serve with butter, jam, and/or clotted cream."
+    ],
+    "note": "Serve with butter, jam, and/or clotted cream."
+  },
+  {
+    "id": "stovetop-popcorn",
+    "title": "Stovetop Popcorn",
+    "subtitle": "About 10 cups",
+    "category": "snacks",
+    "style": "illustrated",
+    "ingredients": [
+      { "text": "2 tbsp extra-virgin olive oil or coconut oil" },
+      { "text": "1/2 cup popcorn kernels, divided", "icon": "corn" },
+      { "text": "Salt, to taste", "icon": "salt" }
+    ],
+    "steps": [
+      "Heat the oil with 2 kernels in a large, heavy-bottomed pot over medium heat, lid on. Wait for those 2 to pop — that's your signal the oil's ready.",
+      "Remove from heat, add the remaining kernels, cover, shimmy to spread evenly, and let sit 60 seconds off the heat.",
+      "Return to medium heat, shimmying occasionally. Once popping starts, crack the lid slightly to let steam escape.",
+      "Cook until pops slow to a few seconds apart. Tip into a bowl, salt to taste, serve right away."
+    ],
+    "note": "Don't crank the heat too high — if you ever see real smoke, turn off the heat and leave the lid on rather than moving the pot.",
+    "noteLabel": "Safety tip:"
+  },
+  {
+    "id": "spicy-orange-bran-muffins",
+    "title": "Spicy Orange Bran Muffins",
+    "category": "baking",
+    "style": "illustrated",
+    "oven": { "temp": "375°F", "time": "~20 min" },
+    "ingredients": [
+      { "text": "1 1/2 cups natural bran" },
+      { "text": "1 3/4 cups buttermilk", "icon": "milk" },
+      { "text": "1 1/4 cups whole wheat flour", "icon": "flour" },
+      { "text": "1 tsp baking powder" },
+      { "text": "1/2 tsp baking soda" },
+      { "text": "2 tsp cinnamon", "icon": "cinnamon-stick" },
+      { "text": "1/2 cup raisins" },
+      { "text": "2 tbsp orange zest", "icon": "orange" },
+      { "text": "1 egg", "icon": "egg" },
+      { "text": "1/4 cup brown sugar, loosely packed", "icon": "sugar" },
+      { "text": "1/4 cup canola oil" },
+      { "text": "2 tbsp molasses" },
+      { "text": "2 tbsp honey" }
+    ],
+    "steps": [
+      "Combine the bran and buttermilk, let it sit while you prep everything else to soften the bran.",
+      "In one bowl combine the remaining dry ingredients (flour, baking powder, baking soda, cinnamon, raisins, zest).",
+      "In another bowl whisk the egg, brown sugar, honey, molasses and oil together.",
+      "Stir in the bran mixture, then the dry ingredients, just until combined.",
+      "Bake in a greased muffin tin at 375°F for about 20 minutes. Best served warm."
+    ]
+  },
+  {
+    "id": "orange-muffins-buttermilk",
+    "title": "Orange Muffins (Buttermilk by Sam)",
+    "subtitle": "Makes 12",
+    "category": "baking",
+    "style": "illustrated",
+    "oven": { "temp": "400°F", "time": "~18 min" },
+    "ingredients": [
+      { "text": "2 large eggs", "icon": "egg" },
+      { "text": "1 cup (200g) granulated sugar", "icon": "sugar" },
+      { "text": "1/2 cup (100g) olive oil" },
+      { "text": "1/2 tsp baking soda" },
+      { "text": "Zest of 2 oranges", "icon": "orange" },
+      { "text": "1/2 tsp fine sea salt", "icon": "salt" },
+      { "text": "2 tsp vanilla extract", "icon": "vanilla-pod" },
+      { "text": "2 1/4 cups (300g) all-purpose flour", "icon": "flour" },
+      { "text": "1/4 cup (60g) almond flour (or +2 tbsp all-purpose)", "icon": "flour" },
+      { "text": "1/2 cup (120g) plain kefir or buttermilk", "icon": "milk" },
+      { "text": "1/2 cup (120g) fresh orange juice", "icon": "orange" },
+      { "text": "Sugar for sprinkling", "icon": "sugar" }
+    ],
+    "steps": [
+      "Rub the sugar and orange zest together to release the oils.",
+      "Beat in the eggs until light and fluffy, then slowly drizzle in the oil.",
+      "Fold in the flour, vanilla, salt and baking soda, then mix in the kefir and orange juice.",
+      "Chill the batter 2–4 hours (or overnight) for a better rise.",
+      "Bake in alternating muffin cups, so they're not touching, at 400°F for about 18 minutes.",
+      "Dip cooled muffins in glaze, or sprinkle with sugar before baking."
+    ],
+    "note": "1 cup powdered sugar + 3 tbsp orange juice + pinch of salt + dash of vanilla.",
+    "noteLabel": "Optional glaze:"
+  },
+  {
+    "id": "orange-muffins-pretty-simple-sweet",
+    "title": "Orange Muffins (Pretty. Simple. Sweet.)",
+    "subtitle": "Makes 12",
+    "category": "baking",
+    "style": "illustrated",
+    "oven": { "temp": "375°F", "time": "15–20 min" },
+    "ingredients": [
+      { "text": "3/4 cup (150g) granulated sugar", "icon": "sugar" },
+      { "text": "1 tbsp orange zest", "icon": "orange" },
+      { "text": "2 1/8 cups (250g) all-purpose flour, sifted", "icon": "flour" },
+      { "text": "2 1/2 tsp baking powder" },
+      { "text": "1/4 tsp salt", "icon": "salt" },
+      { "text": "2 large eggs", "icon": "egg" },
+      { "text": "1/3 cup (75g) melted unsalted butter or neutral oil", "icon": "butter" },
+      { "text": "1/4 cup (60ml) sour cream", "icon": "milk" },
+      { "text": "1/4 cup (60ml) whole milk", "icon": "milk" },
+      { "text": "1/2 cup (120ml) fresh orange juice", "icon": "orange" },
+      { "text": "1/2 tsp vanilla extract", "icon": "vanilla-pod" },
+      { "text": "1 cup optional add-ins (chocolate chips, berries, raisins, nuts)", "icon": "nuts" }
+    ],
+    "steps": [
+      "Toss the sugar and zest together to release the orange oils, then mix in the flour, baking powder and salt.",
+      "In a separate bowl whisk the eggs, melted butter, sour cream, milk, orange juice and vanilla.",
+      "Combine the wet mixture into the dry just until mixed, then fold in any add-ins.",
+      "Bake 15–20 minutes at 375°F until a toothpick comes out clean.",
+      "Drizzle with glaze once cooled, if using."
+    ],
+    "note": "1/2 cup powdered sugar + 1–2 tbsp orange juice.",
+    "noteLabel": "Optional glaze:"
+  },
+  {
+    "id": "orange-cinnamon-muffins-viva",
+    "title": "Orange & Cinnamon Muffins",
+    "category": "baking",
+    "style": "illustrated",
+    "ingredients": [
+      { "text": "Recipe not yet transcribed — the source site blocked automatic extraction." }
+    ],
+    "steps": [
+      "Copy the recipe in by hand from Viva.co.nz, or ask Mom if she remembers her own version."
+    ],
+    "note": "This page still needs the actual recipe filled in.",
+    "noteLabel": "TBD:"
+  },
+  {
+    "id": "banana-cinnamon-muffins",
+    "title": "Banana Cinnamon Muffins",
+    "subtitle": "Makes 12",
+    "category": "baking",
+    "style": "illustrated",
+    "oven": { "temp": "180°C", "time": "20–25 min" },
+    "ingredients": [
+      { "text": "500ml (280g) cake flour", "icon": "flour" },
+      { "text": "10ml baking powder" },
+      { "text": "5ml bicarbonate of soda" },
+      { "text": "3ml salt", "icon": "salt" },
+      { "text": "5ml ground cinnamon", "icon": "cinnamon-stick" },
+      { "text": "200ml (160g) sugar", "icon": "sugar" },
+      { "text": "5ml grated orange rind (optional)", "icon": "orange" },
+      { "text": "100ml milk or plain yoghurt", "icon": "milk" },
+      { "text": "125ml cooking oil" },
+      { "text": "5ml vanilla essence", "icon": "vanilla-pod" },
+      { "text": "3 large bananas, mashed (about 250g)", "icon": "banana" },
+      { "text": "2 extra-large eggs", "icon": "egg" }
+    ],
+    "steps": [
+      "Sift the flour, baking powder, bicarb, salt and cinnamon together; stir in the sugar and orange rind.",
+      "Whisk the eggs, milk, oil and vanilla together.",
+      "Add the wet mixture to the dry, alternating with the mashed banana, mixing lightly — don't overmix, the batter should stay a bit lumpy.",
+      "Spoon into greased muffin pans, filling 2/3 full. Bake at 180°C for 20–25 minutes until golden. Cool on a wire rack; serve warm with butter."
+    ]
+  },
+  {
+    "id": "cinnamon-snackers",
+    "title": "Cinnamon Snackers",
+    "subtitle": "Makes about 20",
+    "category": "baking",
+    "style": "illustrated",
+    "oven": { "temp": "180°C", "time": "10–12 min" },
+    "ingredients": [
+      { "text": "125g butter or margarine, softened", "icon": "butter" },
+      { "text": "80ml (65g) light brown sugar", "icon": "sugar" },
+      { "text": "5ml vanilla essence", "icon": "vanilla-pod" },
+      { "text": "310ml (175g) brown bread flour", "icon": "flour" },
+      { "text": "1ml salt", "icon": "salt" },
+      { "text": "1 extra-large egg", "icon": "egg" },
+      { "text": "Topping: 45ml light brown sugar", "icon": "sugar" },
+      { "text": "Topping: 5ml ground cinnamon", "icon": "cinnamon-stick" }
+    ],
+    "steps": [
+      "Cream the butter and sugar, beat in the egg and vanilla until light.",
+      "Sift the flour and salt (add back any bran caught in the sieve) and mix in to form a soft dough.",
+      "Mix the topping sugar and cinnamon together. Roll the dough into small balls, then roll each ball in the cinnamon-sugar.",
+      "Place on a greased tray, flatten lightly with a fork, and bake at 180°C for 10–12 minutes. Cool on a wire rack, store in an airtight container."
+    ]
+  },
+  {
+    "id": "instant-pot-sweet-potatoes",
+    "title": "Instant Pot Sweet Potatoes",
+    "category": "reference",
+    "style": "illustrated",
+    "ingredients": [
+      { "text": "Whole sweet potatoes, any size" }
+    ],
+    "steps": [
+      "Pressure-cook whole sweet potatoes, then allow a 10 minute natural release. Timing depends on size:",
+      "Small (under 2 in wide): 15 minutes.",
+      "Medium (2–3 in wide): 30 minutes.",
+      "Large (3–4 in wide): 60 minutes."
+    ],
+    "note": "This is Mom's own timing reference, not a full recipe.",
+    "noteLabel": "Note:"
+  },
+  {
+    "id": "banana-loaf",
+    "title": "Banana Loaf",
+    "subtitle": "Loaf or ~12 cupcakes",
+    "category": "baking",
+    "style": "illustrated",
+    "oven": { "temp": "180°C", "time": "1 hr (loaf) or ~30 min (cupcakes)" },
+    "ingredients": [
+      { "text": "2 cups flour", "icon": "flour" },
+      { "text": "3/4 tsp baking powder" },
+      { "text": "1 tsp bicarbonate of soda" },
+      { "text": "1 cup sugar (quantity uncertain — confirm with Mom)", "icon": "sugar" },
+      { "text": "1 tsp vanilla essence", "icon": "vanilla-pod" },
+      { "text": "1/4 lb (114g) butter", "icon": "butter" },
+      { "text": "4 bananas, mashed well", "icon": "banana" },
+      { "text": "2 eggs, well beaten", "icon": "egg" },
+      { "text": "Milk (amount not specified on the card)", "icon": "milk" }
+    ],
+    "steps": [
+      "Cream the butter and sugar, then add the well-beaten eggs.",
+      "Mix the eggs with a bit of milk.",
+      "Fold in the flour mixed with the baking powder and bicarb.",
+      "Add the mashed bananas and bake in a medium oven — 1 hour at 180°C as a loaf, or about 30 minutes as cupcakes."
+    ],
+    "doneness": "TBD — the sugar quantity and whether there's a pinch of salt were hard to read on the original card. Double-check with Mom, or she may remember the amounts by heart.",
+    "note": "Mom swapped the milk for buttermilk once and said it worked really well — she also used 6 small bananas instead of 4 medium, which made the loaf noticeably higher. (Dated 30/4/2024)"
+  },
+  {
+    "id": "green-smoothie",
+    "title": "Green Smoothie",
+    "category": "snacks",
+    "style": "illustrated",
+    "ingredients": [
+      { "text": "2 bananas", "icon": "banana" },
+      { "text": "2 apples, peeled and cored" },
+      { "text": "2 brown pears" },
+      { "text": "Juice of 2 oranges", "icon": "orange" },
+      { "text": "2–4 dessert spoons yoghurt", "icon": "milk" },
+      { "text": "Some honey, to taste" }
+    ],
+    "steps": [
+      "No method given — blend everything together."
+    ]
+  },
+  {
+    "id": "peanut-butter-cocoa-smoothie",
+    "title": "Peanut Butter Cocoa Smoothie",
+    "category": "snacks",
+    "style": "illustrated",
+    "ingredients": [
+      { "text": "Peanut butter" },
+      { "text": "Cocoa nibs", "icon": "chocolate-bar" },
+      { "text": "Dates" },
+      { "text": "Banana", "icon": "banana" },
+      { "text": "Coconut milk", "icon": "milk" }
+    ],
+    "steps": [
+      "No exact quantities given — blend to taste and consistency."
+    ]
+  },
+  {
+    "id": "banana-peanut-butter-smoothie",
+    "title": "Banana Peanut Butter Smoothie",
+    "category": "snacks",
+    "style": "illustrated",
+    "ingredients": [
+      { "text": "1/2 cup milk", "icon": "milk" },
+      { "text": "1/2 cup full cream yoghurt", "icon": "milk" },
+      { "text": "3 ice blocks" },
+      { "text": "1 tsp peanut butter" },
+      { "text": "1 banana", "icon": "banana" }
+    ],
+    "steps": [
+      "No method given — blend everything together."
+    ]
+  },
+  {
+    "id": "vegetable-breyani",
+    "title": "Vegetable Breyani",
+    "category": "mains",
+    "style": "illustrated",
+    "ingredients": [
+      { "text": "2 onions", "icon": "onion" },
+      { "text": "1/2 tsp ground whole spice (garam masala), fried briefly in oil" },
+      { "text": "1 tsp cumin seeds" },
+      { "text": "1 green chili, halved and seeded" },
+      { "text": "2 tbsp garlic and ginger paste", "icon": "garlic-ginger" },
+      { "text": "1 1/2 tsp salt", "icon": "salt" },
+      { "text": "1 tsp Kokni (or red leaf masala)" },
+      { "text": "1 tsp cumin" },
+      { "text": "1 tsp ground coriander" },
+      { "text": "1 tsp turmeric" },
+      { "text": "1 packet cauliflower and broccoli" },
+      { "text": "1/2 packet stir-fry vegetables" },
+      { "text": "1 1/2 cups basmati rice", "icon": "rice" },
+      { "text": "1 tbsp ghee", "icon": "butter" },
+      { "text": "1 cinnamon stick", "icon": "cinnamon-stick" },
+      { "text": "2 tsp salt, for the rice", "icon": "salt" },
+      { "text": "Turmeric, for the rice" },
+      { "text": "1 tin butter beans, drained", "icon": "lentils-beans" },
+      { "text": "1 tin lentils, drained", "icon": "lentils-beans" },
+      { "text": "6 small pieces of butter, for steaming", "icon": "butter" }
+    ],
+    "steps": [
+      "Fry the ground whole spice briefly in oil, then add the onions, cumin seeds and halved green chili. Fry until golden, about 10 minutes.",
+      "Add the garlic and ginger, salt, Kokni, cumin, coriander and turmeric. Add a dash of boiled water to help cook the spices through.",
+      "Add the cauliflower, broccoli and stir-fry vegetables. Toss with the onion mixture briefly.",
+      "Add 1/2 cup water and cook for about 20 minutes, until the vegetables are soft.",
+      "Separately, cook the basmati rice with the ghee, cinnamon stick, 2 tsp salt and a little turmeric.",
+      "To assemble: layer the vegetable-and-onion mixture, then the drained lentils and butter beans, then the rice on top. Dot the top with the 6 small pieces of butter, close the lid, and steam over very low heat for 20 minutes — same method as the chicken breyani."
+    ]
+  },
+  {
+    "id": "muesli",
+    "title": "Muesli",
+    "category": "snacks",
+    "style": "illustrated",
+    "oven": { "temp": "150°C", "time": "stirring regularly until toasted" },
+    "ingredients": [
+      { "text": "Almonds", "icon": "nuts" },
+      { "text": "Raw cocoa", "icon": "chocolate-bar" },
+      { "text": "100g coconut shavings" },
+      { "text": "Pumpkin seeds" },
+      { "text": "Sunflower seeds" },
+      { "text": "Cocoa powder", "icon": "chocolate-bar" },
+      { "text": "Coconut oil" }
+    ],
+    "steps": [
+      "Mix the almonds, raw cocoa, coconut shavings, pumpkin seeds and sunflower seeds in a bowl.",
+      "Add the cocoa powder and stir in the coconut oil to coat.",
+      "Spread out and bake at 150°C, stirring regularly so it toasts evenly."
+    ]
+  },
+  {
+    "id": "date-slices",
+    "title": "Date Slices",
+    "category": "baking",
+    "style": "illustrated",
+    "oven": { "temp": "TBD", "time": "confirm with Mom" },
+    "ingredients": [
+      { "text": "1 slab of dates" },
+      { "text": "Water, enough to mix with the dates" },
+      { "text": "250g butter", "icon": "butter" },
+      { "text": "Crushed cranberries" },
+      { "text": "Almonds", "icon": "nuts" },
+      { "text": "2 cups flour", "icon": "flour" },
+      { "text": "1/2 cup Pronutro" },
+      { "text": "Bicarbonate of soda (some)" }
+    ],
+    "steps": [
+      "Mix the dates with a little water and the butter, then stir in the crushed cranberries.",
+      "Add the almonds, flour, Pronutro and a little bicarb.",
+      "Mix and spread into an oven pan, then bake. No time or temp was noted on this one — worth checking with Mom, or test at a standard 180°C and watch for golden edges."
+    ]
+  },
+  {
+    "id": "barley-raisin-water",
+    "title": "Barley and Raisin Water",
+    "category": "snacks",
+    "style": "illustrated",
+    "ingredients": [
+      { "text": "2 tbsp pearl barley" },
+      { "text": "A handful of raisins" }
+    ],
+    "steps": [
+      "Soak the barley overnight, rinse, then soak again.",
+      "Boil the barley, adding the raisins towards the end of the process."
+    ]
+  },
+  {
+    "id": "lamb-pilaf",
+    "title": "Lamb Pilaf",
+    "category": "mains",
+    "style": "illustrated",
+    "ingredients": [
+      { "text": "3 cups basmati rice", "icon": "rice" },
+      { "text": "3 onions", "icon": "onion" },
+      { "text": "3 green chilies" },
+      { "text": "4 tsp garlic and ginger mix", "icon": "garlic-ginger" },
+      { "text": "100g pure butter", "icon": "butter" },
+      { "text": "1 cinnamon stick", "icon": "cinnamon-stick" },
+      { "text": "2 beef stock cubes, dissolved in 750ml water" },
+      { "text": "3 packets stewing lamb" },
+      { "text": "1 tbsp Kokni" },
+      { "text": "1 tsp cumin" },
+      { "text": "1 tsp turmeric" },
+      { "text": "1 tsp oregano" },
+      { "text": "2 tins lentils", "icon": "lentils-beans" },
+      { "text": "Salt and pepper, to taste", "icon": "salt" },
+      { "text": "Steak and chips spice, for the meat" }
+    ],
+    "steps": [
+      "Boil the rice.",
+      "Sprinkle the lamb with steak and chips spice, then brown the meat and trim off excess fat.",
+      "Place the lamb in a pressure cooker for 30 minutes.",
+      "Fry the onions, chilies, garlic-ginger mix, cinnamon stick, and spices (Kokni, cumin, turmeric, oregano) to build the onion mixture, using the beef stock as needed.",
+      "Add the cooked lamb to the onion mixture, then stir through the lentils.",
+      "Combine with the boiled rice, season with salt and pepper to taste."
+    ]
+  },
+  {
+    "id": "macaroni-and-cheese",
+    "title": "Macaroni and Cheese",
+    "category": "mains",
+    "style": "illustrated",
+    "oven": { "temp": "180°C", "time": "1 hr" },
+    "ingredients": [
+      { "text": "Macaroni (Fattis & Monis)" },
+      { "text": "3L water" },
+      { "text": "15ml salt", "icon": "salt" },
+      { "text": "3 onions, chopped", "icon": "onion" },
+      { "text": "A bunch of celery, finely chopped" },
+      { "text": "1 green pepper" },
+      { "text": "100g butter", "icon": "butter" },
+      { "text": "1 tsp Nando's mild sauce" },
+      { "text": "300g mature cheddar cheese, coarsely grated", "icon": "cheese" },
+      { "text": "200g breadcrumbs" },
+      { "text": "1 tsp each: origanum, paprika, mustard" },
+      { "text": "6 eggs", "icon": "egg" },
+      { "text": "2 tsp salt", "icon": "salt" },
+      { "text": "1.5L milk", "icon": "milk" }
+    ],
+    "steps": [
+      "Boil the macaroni in the water with the 15ml salt until done.",
+      "In a pan, cook the onions, celery and green pepper in the 100g butter until soft and golden. Stir in the Nando's mild sauce.",
+      "Mix the breadcrumbs with the origanum, paprika and mustard.",
+      "In an oven dish, combine the cooked macaroni, breadcrumbs, grated cheese and the onion mixture.",
+      "Whisk the eggs with the 2 tsp salt and the milk, then pour over everything in the dish.",
+      "Bake at 180°C for 1 hour. Cool before serving."
+    ]
+  },
+  {
+    "id": "chicken-pilaf",
+    "title": "Chicken Pilaf",
+    "category": "mains",
+    "style": "illustrated",
+    "oven": { "temp": "180°C", "time": "30 min, foil-covered" },
+    "ingredients": [
+      { "text": "1 cup basmati rice", "icon": "rice" },
+      { "text": "2 onions", "icon": "onion" },
+      { "text": "1 green chili" },
+      { "text": "2 tsp garlic and ginger mix", "icon": "garlic-ginger" },
+      { "text": "50g pure butter", "icon": "butter" },
+      { "text": "1 cinnamon stick", "icon": "cinnamon-stick" },
+      { "text": "1 tsp chicken stock, dissolved in 750ml water" },
+      { "text": "1kg chicken", "icon": "chicken" },
+      { "text": "1 tbsp Kokni or chicken masala" },
+      { "text": "1 tsp cumin" },
+      { "text": "1 tsp turmeric" },
+      { "text": "1 tsp oregano" },
+      { "text": "1 tin lentils", "icon": "lentils-beans" },
+      { "text": "Salt and pepper, to taste", "icon": "salt" },
+      { "text": "Chicken spice, for the meat" }
+    ],
+    "steps": [
+      "Boil the rice.",
+      "Sprinkle the chicken with chicken spice, then brown it and trim off excess fat.",
+      "Melt the butter in a pot, add diced onions, chili, garlic and ginger, and cook until soft and golden.",
+      "Stir in the masala/Kokni, oregano, turmeric and cumin. Add a splash of boiling water and cook for about a minute to bring out the spices.",
+      "Add the browned chicken, stir, season with salt and pepper, then add the stock. Cook for about 5 minutes.",
+      "Stir in the lentils.",
+      "Mix the chicken mixture into the boiled rice. Cover the dish with foil and bake at 180°C for 30 minutes."
+    ]
+  },
+  {
+    "id": "chicken-creamed-corn-soup",
+    "title": "Chicken and Creamed Corn Soup",
+    "category": "mains",
+    "style": "illustrated",
+    "ingredients": [
+      { "text": "1 red onion, diced", "icon": "onion" },
+      { "text": "3 cloves garlic, mashed", "icon": "garlic-ginger" },
+      { "text": "Chili flakes, a sprinkle" },
+      { "text": "4 chicken breasts, cubed", "icon": "chicken" },
+      { "text": "Chicken spice, Cajun spice, oregano, salt and pepper, to season" },
+      { "text": "2 tbsp butter", "icon": "butter" },
+      { "text": "1 tsp flour", "icon": "flour" },
+      { "text": "2 cups half and half (1 cup cream + 1 cup milk)", "icon": "milk" },
+      { "text": "Cayenne pepper, salt (generously) and pepper, to taste", "icon": "salt" },
+      { "text": "1 bag frozen corn", "icon": "corn" },
+      { "text": "3 cups boiling water" },
+      { "text": "Cream of corn \"cuppa soup\" sachets, sifted", "icon": "corn" },
+      { "text": "2 tsp chicken stock" },
+      { "text": "Fresh parsley, to finish" }
+    ],
+    "steps": [
+      "In a small pot, cook the diced red onion, mashed garlic and chili flakes.",
+      "Season the cubed chicken with chicken spice, Cajun spice, oregano, salt and pepper. Cook until browned, then let it rest with the lid on.",
+      "Separately, make the creamed corn: melt the butter, stir in the flour, then add the half-and-half. Season with cayenne pepper, salt and pepper. Add the frozen corn and bring to a boil, about 10 minutes, then simmer for 15 minutes.",
+      "For the stock: combine the boiling water with the sifted cream-of-corn soup sachet and the chicken stock.",
+      "Combine the chicken, creamed corn and stock together in one pot, and boil for a few minutes. Finish with fresh parsley."
+    ]
+  },
+  {
+    "id": "christmas-cake",
+    "title": "Christmas Cake",
+    "subtitle": "Serves 20–25",
+    "category": "baking",
+    "style": "illustrated",
+    "oven": { "temp": "160°C (140°C fan)", "time": "~3 hrs 15 min total" },
+    "ingredients": [
+      { "text": "300g raisins" },
+      { "text": "150g diced dried apricots, chopped small" },
+      { "text": "75g mixed peel, diced" },
+      { "text": "150g glace cherries, chopped" },
+      { "text": "180g dates, diced" },
+      { "text": "1 cup + 2 tbsp apple juice (or 1/3 brandy + 2/3 apple juice)" },
+      { "text": "115g unsalted butter, softened", "icon": "butter" },
+      { "text": "1 1/2 cups dark brown sugar, packed", "icon": "sugar" },
+      { "text": "1/2 cup vegetable oil" },
+      { "text": "3 tbsp molasses or golden syrup" },
+      { "text": "1/2 tsp salt", "icon": "salt" },
+      { "text": "1/2 tsp allspice" },
+      { "text": "1/2 tsp cinnamon", "icon": "cinnamon-stick" },
+      { "text": "1/2 tsp nutmeg" },
+      { "text": "3 eggs", "icon": "egg" },
+      { "text": "1/2 tsp baking powder" },
+      { "text": "1 2/3 cups plain flour", "icon": "flour" },
+      { "text": "3/4 cup chopped walnuts (optional)", "icon": "nuts" }
+    ],
+    "steps": [
+      "Combine the dried fruit and juice/brandy in a microwavable container. Microwave for about 1.5 minutes until hot, stir to coat, then cover and let sit for 1 hour to plump up and cool.",
+      "Preheat oven to 160°C (140°C fan). Grease and line a deep 21–22cm round cake tin.",
+      "Beat the butter and sugar until smooth. Beat in the oil and molasses.",
+      "Add the salt, spices and baking powder, beat to combine. Add the eggs one at a time, beating just until incorporated.",
+      "Stir in the flour, then fold in the soaked fruit (with any remaining liquid) and the walnuts.",
+      "Pour into the tin, cover with foil, and bake 2.5 hours. Remove the foil and bake a further 30–45 minutes, until a skewer comes out clean.",
+      "Cool 20 minutes in the tin, then transfer to a rack to cool completely before serving or decorating."
+    ],
+    "note": "Keeps well — a few months in the fridge, about a year in the freezer.",
+    "noteLabel": "Storage:"
+  }
+]

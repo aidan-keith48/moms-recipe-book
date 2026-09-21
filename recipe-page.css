@@ -1,0 +1,245 @@
+/* ==========================================================================
+   Recipe page anatomy — illustrated style (default)
+   Shared by the standalone preview pages and the flipbook (index.html).
+   Depends on styles.css tokens.
+   ========================================================================== */
+
+.recipe-page {
+  background: var(--color-cream);
+  background-image: radial-gradient(rgba(74, 51, 36, 0.05) 1px, transparent 1px);
+  background-size: 14px 14px;
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  padding: var(--space-xl) var(--space-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.recipe-page::before {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border: 1.5px solid rgba(201, 162, 39, 0.4);
+  border-radius: calc(var(--radius-card) - 4px);
+  pointer-events: none;
+}
+
+.corner-flourish {
+  position: absolute;
+  width: 26px;
+  opacity: 0.7;
+}
+.corner-flourish--br { bottom: 22px; right: 26px; }
+.corner-flourish--tr { top: 12px; right: 18px; }
+
+/* -- Header ----------------------------------------------------- */
+.page-header {
+  position: relative;
+  padding-bottom: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.page-header h1 {
+  font-size: 4rem;
+  line-height: 1.15;
+  margin-bottom: var(--space-sm);
+  max-width: 60%;
+  word-spacing: 0.15em;
+}
+
+/* Recipes without a hero illustration don't need to leave room for one. */
+.page-header.no-hero h1 {
+  max-width: 92%;
+}
+
+.doodle {
+  position: absolute;
+  opacity: 0.85;
+}
+.doodle--heart1 { top: -6px; left: 2px; width: 22px; }
+.doodle--heart2 { top: 12px; left: 250px; width: 18px; }
+.doodle--star1  { top: -12px; left: 310px; width: 24px; }
+.doodle--sparkle1 { top: 74px; left: 350px; width: 20px; }
+.doodle--sparkle2 { top: -6px; left: 155px; width: 16px; }
+.doodle--sparkle3 { top: 40px; left: -18px; width: 14px; }
+
+/* Generic, length-independent doodle row — used by the templated recipe
+   pages (title text varies), vs. the hand-tuned scatter above which is
+   specific to "Brownies". */
+.header-doodles {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xs);
+}
+.header-doodles img {
+  width: 20px;
+  opacity: 0.8;
+}
+
+.hero {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 250px;
+}
+
+.ribbon-wrap {
+  position: relative;
+  display: inline-block;
+  margin-top: var(--space-xs);
+}
+
+.ribbon-wrap img {
+  display: block;
+  width: 230px;
+  height: auto;
+}
+
+.ribbon-wrap .ribbon-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  color: var(--color-coffee);
+}
+
+/* -- Two-column body ---------------------------------------------- */
+.spread {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+}
+
+.col h2 {
+  font-size: 1.7rem;
+  display: inline-block;
+  background: var(--color-cream);
+  position: relative;
+  padding-right: var(--space-sm);
+}
+
+.col-heading-rule {
+  border: none;
+  border-top: 1px dashed var(--color-gold);
+  margin: -0.9rem 0 var(--space-md);
+}
+
+.ingredients-list {
+  list-style: none;
+  margin: 0 0 var(--space-lg);
+  padding: 0;
+}
+
+.ingredients-list li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xs);
+}
+
+.ingredients-list img {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+}
+
+.ingredient-dot {
+  width: 10px;
+  height: 10px;
+  min-width: 10px;
+  border-radius: 50%;
+  background: var(--color-gold);
+  margin: 0 13px;
+}
+
+.callout.dashed {
+  border-style: dashed;
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.callout.dashed img {
+  width: 42px;
+  height: 42px;
+}
+
+.method-hero {
+  float: right;
+  width: 90px;
+  margin: -6px 0 var(--space-sm) var(--space-md);
+}
+
+.method-list {
+  padding-left: 1.3em;
+  margin: 0 0 var(--space-lg);
+}
+
+.method-list li {
+  margin-bottom: var(--space-sm);
+}
+
+.speech-bubble {
+  position: relative;
+  background: #fff;
+  border: 1.5px solid var(--color-gold);
+  border-radius: var(--radius-card);
+  padding: var(--space-sm) var(--space-md);
+  font-size: var(--text-note);
+  font-style: italic;
+  margin-bottom: var(--space-lg);
+}
+
+.speech-bubble::after {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 32px;
+  width: 14px;
+  height: 14px;
+  background: #fff;
+  border-left: 1.5px solid var(--color-gold);
+  border-top: 1.5px solid var(--color-gold);
+  transform: rotate(45deg);
+}
+
+.nota-box {
+  grid-column: 1 / -1;
+  position: relative;
+  background: var(--color-kraft);
+  border-radius: var(--radius-card);
+  padding: var(--space-md) var(--space-md) var(--space-md) 2.75rem;
+  margin-top: var(--space-sm);
+}
+
+.nota-box .washi {
+  position: absolute;
+  top: -14px;
+  left: 24px;
+  width: 90px;
+}
+
+.nota-box .nota-label {
+  font-family: var(--font-title);
+  font-size: 1.6rem;
+  display: block;
+  margin-bottom: 0.15rem;
+}
+
+.nota-box p {
+  margin: 0;
+  font-size: var(--text-note);
+}
+
+@media (max-width: 640px) {
+  .spread { grid-template-columns: 1fr; }
+  .page-header h1 { max-width: 100%; }
+  .hero { position: static; width: 160px; margin-bottom: var(--space-sm); }
+  .nota-box { grid-column: auto; }
+}
