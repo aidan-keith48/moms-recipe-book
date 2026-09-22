@@ -263,7 +263,13 @@ function coverHtml() {
 
 function backCoverHtml() {
   return `<div class="back-cover-page">
-    <span class="made-with-love">made with love</span>${icon('heart')}
+    <div class="farewell">
+      <p>Her recipes were made with love.</p>
+      <p>Her life was lived with even more.</p>
+      <p>A love that will forever remain at our table.</p>
+    </div>
+    ${icon('heart')}
+    <span class="credit">Created with love by Aidan &amp; Shanny</span>
   </div>`;
 }
 
