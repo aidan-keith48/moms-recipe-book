@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mom's Recipes — Print Version</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="recipe-page.css">
+<link rel="stylesheet" href="book.css">
+<link rel="stylesheet" href="print.css">
+</head>
+<body class="size-a4">
+
+<div class="print-banner no-print">
+  <h1>Mom's Recipes — Print Version</h1>
+  <p>This page is laid out as separate sheets instead of a flip-through book, so you can print it or save it as a PDF.</p>
+  <p>Pick a paper size, then use your browser's Print (⌘P / Ctrl+P). Set <strong>Margins: None</strong> and <strong>Scale: 100%</strong> for the best fit.</p>
+  <div class="sizes">
+    <button type="button" id="size-a4" aria-pressed="true">A4</button>
+    <button type="button" id="size-letter" aria-pressed="false">US Letter</button>
+    <button type="button" id="do-print">Print / Save as PDF</button>
+  </div>
+  <p>Or skip straight to a ready-made PDF:</p>
+  <div class="sizes">
+    <a class="btn secondary" href="recipes-a4.pdf" download>Download A4 PDF</a>
+    <a class="btn secondary" href="recipes-letter.pdf" download>Download US Letter PDF</a>
+  </div>
+  <p><a class="btn secondary" href="index.html">Back to the book</a></p>
+</div>
+
+<div id="book"><div class="loading-note no-print">Preparing the pages…</div></div>
+
+<script src="book-core.js"></script>
+<script src="print.js"></script>
+</body>
+</html>

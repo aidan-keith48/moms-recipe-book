@@ -1,0 +1,126 @@
+/* ==========================================================================
+   Printable version. Reuses the same page anatomy as the live book
+   (recipe-page.css, book.css's .rp/.cover-page/.back-cover-page rules all
+   match on #book), just laid out as one page after another instead of a
+   flipbook, each sized to exactly one sheet of paper.
+   ========================================================================== */
+
+/* book.css (loaded for the shared .rp/.cover-page/etc rules) locks html/body
+   to the viewport for the flipbook; this page is a plain scrolling document. */
+html, body {
+  height: auto;
+  overflow: visible;
+  margin: 0;
+  background: #d8d8d8;
+}
+
+body.size-letter { --page-w: 8.5in; --page-h: 11in; }
+body.size-a4 { --page-w: 210mm; --page-h: 297mm; }
+
+.print-banner {
+  max-width: 700px;
+  margin: 28px auto;
+  padding: 18px 22px;
+  background: #fffdf9;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  font-family: var(--font-body);
+  color: var(--color-coffee);
+  text-align: center;
+}
+.print-banner h1 {
+  font-family: var(--font-title);
+  font-weight: 400;
+  font-size: 1.8rem;
+  margin: 0 0 0.3em;
+}
+.print-banner p {
+  margin: 0.4em 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+.print-banner .sizes {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+.print-banner button,
+.print-banner a.btn {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--color-coffee);
+  background: var(--color-rose);
+  border: none;
+  text-decoration: none;
+  border-radius: var(--radius-pill);
+  padding: 0.55em 1.3em;
+  cursor: pointer;
+  box-shadow: var(--shadow-card);
+}
+.print-banner button.secondary,
+.print-banner a.btn.secondary {
+  background: var(--color-cream);
+}
+.print-banner button[aria-pressed="true"] {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+}
+
+/* The live book's cover has a link back to this page — meaningless once
+   printed or in this page's own preview. */
+.cover-print-link {
+  display: none;
+}
+
+#book {
+  margin: 0 auto;
+  /* book.css fades #book in from opacity:0 once book.js adds a "ready" class
+     for the flipbook's open animation; this page never adds that class, so
+     it must be shown immediately instead. */
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+#book .page {
+  width: var(--page-w);
+  height: var(--page-h);
+  margin: 0 auto 28px;
+  background: var(--color-cream);
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  break-after: page;
+  page-break-after: always;
+}
+#book .page:last-child {
+  margin-bottom: 0;
+  break-after: avoid;
+  page-break-after: avoid;
+}
+
+.loading-note {
+  text-align: center;
+  font-family: var(--font-title);
+  font-size: 1.4rem;
+  color: var(--color-coffee);
+  padding: 60px 0;
+}
+
+@media print {
+  @page {
+    margin: 0;
+  }
+  html, body {
+    background: #fff;
+  }
+  .no-print {
+    display: none !important;
+  }
+  #book .page {
+    box-shadow: none;
+    margin: 0;
+  }
+}
